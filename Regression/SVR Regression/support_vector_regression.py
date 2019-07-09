@@ -36,7 +36,7 @@ regressor.fit(X, y)
 
 
 # Predicting a new result with Linear Reg
-y_pred = regressor.predict(sc_X.transformn(np.array([[6.5]])))
+y_pred = sc_y.inverse_transform(regressor.predict(sc_X.transform(np.array([[6.5]]))))
 
 
 # Visualize SVR. Reg. Results.
